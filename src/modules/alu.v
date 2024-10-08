@@ -36,3 +36,20 @@ Consideraciones adicionales:
     SLT: La operación SLT es una comparación para ver si srcA es menor que srcB. Devuelve 1 si es cierto, o 0 en caso contrario.
     Si necesitas más operaciones o un comportamiento distinto para el default, puedes ajustar el código.
 */
+
+/*
+    Entradas:
+        srcA(32): Primer operando de 32 bits.
+        srcB(32): Segundo operando de 32 bits.
+        ALUControl(3): Señal de control de 3 bits que selecciona la operación a realizar.
+    Salidas:
+        result(32): Resultado de la operación de 32 bits.
+
+    Tabla de verdad (según la imagen):
+        ALUControl (2:0)	Función
+        000	                add
+        001	                subtract
+        010	                and
+        011	                or
+        101	                SLT
+*/
