@@ -1,22 +1,25 @@
 module SE (
     input [24:0] inm,   // 25 bits de inmediato
-    input [1:0] src,    // Selecciona el tipo de instrucción
+    input [2:0] src,    // Selecciona el tipo de instrucción
     output reg [31:0] inmExt // Salida extendida a 32 bits
 );
 
     always @(*) begin
         case (src)
-            2'b00: begin // Tipo I
+            3'b000: begin // Tipo I
                 inmExt = {{20{inm[24]}}, inm[24:13]};  // Extiende el bit de signo de inm[24]
             end
-            2'b01: begin // Tipo S
+            3'b001: begin // Tipo S
                 inmExt = {{20{inm[24]}}, inm[24:18], inm[4:0]};  // Combina y extiende los bits
             end
-            2'b10: begin // Tipo B
+            3'b010: begin // Tipo B
                 inmExt = {{19{inm[24]}}, inm[24], inm[0], inm[23:18], inm[4:1]};  // Formato B
             end
-            2'b11: begin // Tipo U
+            3'b011: begin // Tipo U
                 inmExt = {inm[24:13], 12'b0};  // Se extiende con ceros a la derecha
+            end
+            3'b100: begin // Tipo J
+                inmExt = {{11{inm[24]}}, inm[24:0], 1'b0}; // Extendemos el signo y añadimos un 0 al final
             end
             default: begin
                 inmExt = 32'b0;  // Valor por defecto en caso de error
