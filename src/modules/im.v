@@ -15,10 +15,12 @@ endmodule
 /*
 Memoria de programa: es la región de la memoria del sistema donde se
 aloja el programa que se está ejecutando.
+
 Sus entradas son la dirección de memoria accedida (A) y la salida es la
 información (RD) que se halla en dicha dirección, la cual puede ser una
 instrucción o un dato. Supondremos que todas las señales son de 32 bits
 de ancho.
+
 En esta implementacion suponemos que la memoria de programa es de
 solo lectura (ROM)
 */

@@ -8,3 +8,5 @@ module Mux2x1 (
     assign salMux = sel ? e2 : e1; // Si sel es 1, selecciona e2, de lo contrario selecciona e1
 
 endmodule
+
+//Multiplexor 2x1 de 32 bits

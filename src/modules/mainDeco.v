@@ -71,3 +71,9 @@ module mainDeco(
     end
 
 endmodule
+
+/*
+Decodificador principal:
+Unidad que decodifica el tipo de instruccion
+para generar el camino de datos
+*/

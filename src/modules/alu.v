@@ -19,7 +19,7 @@ module ALU (
 endmodule
 
 /*
-xplicación:
+Explicación:
 
     Entradas:
         srcA y srcB: Son los operandos de 32 bits sobre los que se realizan las operaciones.
@@ -34,7 +34,7 @@ xplicación:
 Consideraciones adicionales:
 
     SLT: La operación SLT es una comparación para ver si srcA es menor que srcB. Devuelve 1 si es cierto, o 0 en caso contrario.
-    Si necesitas más operaciones o un comportamiento distinto para el default, puedes ajustar el código.
+    Si necesito más operaciones o un comportamiento distinto para el default, deberia ajustar el código.
 */
 
 /*

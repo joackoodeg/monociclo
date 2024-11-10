@@ -40,3 +40,22 @@ module UC(
     assign pcSrc = branch & zero;
 
 endmodule
+
+
+/* Unidad de control:
+Unidad de Control: es la circuitería que controla el flujo de 
+datos a través del procesador, generando las señales necesarias 
+para operar el camino de datos. 
+
+Es una máquina de estados finitos cuyas tareas son leer,
+decodificar, ejecutar la instruccion y almacenar los resultados.
+
+Esta constituida por:
+
+Un registro de instrucción encargado de almacenar la instrucción en ejecución;
+Un contador de programas (PC) que contiene la dirección de memoria de la siguiente instrucción a ejecutar;
+Un decodificador que interpreta la instrucción para su posterior proceso, extrayendo el código de operación
+de la instrucción en curso;
+Un secuenciador que genera las microinstrucciones necesarias para ejecutar la instrucción; y
+Un reloj que proporciona sincronización entre los componentes.
+*/
