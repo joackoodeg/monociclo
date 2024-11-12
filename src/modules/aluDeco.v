@@ -1,4 +1,4 @@
-module aluDeco(
+module aluDecov(
     input [1:0] aluOp,
     input [2:0] func3,
     input func7,
@@ -19,7 +19,7 @@ module aluDeco(
                     default: aluControl = 3'b000; // Default case
                 endcase
             end
-            default: aluControl = 3'b000; // Default case for other values of aluOp
+            default: aluControl = 3'b000; 
         endcase
     end
 

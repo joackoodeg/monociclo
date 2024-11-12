@@ -35,7 +35,7 @@ module mainDeco(
                 immSrc = 2'b01;
                 aluSrc = 1;
                 memWrite = 1;
-                resSrc = 0; // X en la tabla, pero no es relevante aquí
+                resSrc = 0; // X en la tabla, pero no es relevante aca
                 branch = 0;
                 aluOp = 2'b00;
             end
@@ -53,7 +53,7 @@ module mainDeco(
                 immSrc = 2'b10;
                 aluSrc = 0;
                 memWrite = 0;
-                resSrc = 0; // X en la tabla, pero no es relevante aquí
+                resSrc = 0; // X en la tabla, pero no es relevante aca
                 branch = 1;
                 aluOp = 2'b01;
             end
